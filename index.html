@@ -27,8 +27,9 @@
             text-align: center;
             border-bottom: 1px solid #e7e7e7; /* Subtle border */
             display: flex; /* Added for logo and nav alignment */
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row; /* Changed to row */
+            justify-content: space-between; /* Added justify-content */
+            align-items: center; /* Added align-items */
         }
         header h1 {
             font-family: 'Playfair Display', serif;
@@ -210,8 +211,9 @@
         /* Menu Styles */
         .menu {
             display: flex;
-            justify-content: center;
-            margin-bottom: 40px; /* Space between menu and heading */
+            justify-content: flex-end; /* Aligned to the right */
+            margin-bottom: 0; /* Removed default margin-bottom */
+            align-items: center; /* Vertically center with logo */
         }
         .menu ul {
             list-style: none;
@@ -258,6 +260,14 @@
              .menu li {
                 margin: 0 10px;
             }
+             header {
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu{
+                justify-content: center;
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -274,7 +284,9 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div class="container">
+        
+    </header>
+     <div class="container">
             <h1>Stop wasting time on content ideas, and start trending now</h1>
             <p>The world's 1st true AI tool to catch and predict trends that go viral, personalized for you.</p>
             <p>Save up to <span style="font-size: 1.6em; color: #ff6b6b; font-weight: bold;">80%</span> of time on researching ideas, and gain <span style="font-size: 1.6em; color: #ff6b6b; font-weight: bold;">5x</span> views by average*.</p>
@@ -289,7 +301,6 @@
             </form>
             <p style="margin-top: 20px; font-size: 0.9em; color: #777; font-style: italic;">Get notified when we start next invitation</p>
         </div>
-    </header>
 
     <main>
         
