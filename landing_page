@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Ahead. Create Smarter.</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #ffffff;
+            color: #333;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid #e7e7e7;
+        }
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        header p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            color: #555;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .cta-button.secondary {
+            background-color: #6c757d;
+        }
+        .cta-button.secondary:hover {
+            background-color: #5a6268;
+        }
+        .cta-subtext {
+            display: block;
+            font-size: 0.9em;
+            margin-top: 10px;
+            color: #777;
+        }
+        section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+        .offer-grid, .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+        .offer-item, .benefit-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .offer-item:hover, .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+        .offer-item h3, .benefit-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+        .offer-item .premium-tag {
+            font-size: 0.8em;
+            background-color: #ffc107;
+            color: #333;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+         .offer-item .free-tag {
+            font-size: 0.8em;
+            background-color: #28a745;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+        .offer-item p, .benefit-item p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .offer-item .arrow-text {
+            font-weight: bold;
+            color: #333;
+        }
+        .newsletter-section {
+            background-color: #e9ecef;
+            padding: 60px 0;
+        }
+        .newsletter-section input[type="email"] {
+            padding: 15px;
+            font-size: 1em;
+            width: 60%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            margin-bottom: 10px;
+        }
+        .newsletter-section .submit-button {
+            padding: 15px 30px;
+            font-size: 1em;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .newsletter-section .submit-button:hover {
+            background-color: #1e7e34;
+        }
+        .newsletter-section .spam-notice {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 15px;
+        }
+        .trusted-by-section {
+            padding: 40px 0;
+            background: #fff;
+        }
+        .trusted-by-section .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .trusted-by-section .logos img {
+            max-height: 60px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        .trusted-by-section .logos img:hover {
+            opacity: 1;
+        }
+        .trusted-by-section .quote {
+            font-style: italic;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .trusted-by-section .quote-author {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+        }
+        footer h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        footer p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #f8f9fa;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 2.2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .offer-grid, .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .newsletter-section input[type="email"] {
+                width: calc(100% - 32px); /* Account for padding */
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            .newsletter-section .submit-button {
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Create Content That Resonates — Every Time</h1>
+            <p>Real-time trend alerts, personalized content inspiration, and weekly digests tailored for creators and their teams.</p>
+            <a href="#waitlist" class="cta-button">Join the Waitlist</a>
+            <span class="cta-subtext">Sign up now to get free weekly insights and early access.</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="what-we-offer">
+            <div class="container">
+                <h2>What We Offer</h2>
+                <div class="offer-grid">
+                    <div class="offer-item">
+                        <h3>Instant Trend Alerts <span class="premium-tag">Premium</span></h3>
+                        <p>Cut through the noise. Get notified the moment a major trend breaks — whether it’s on TikTok, YouTube, or in world news.</p>
+                        <p class="arrow-text">→ Be the first to react. Stay relevant. Go viral.</p>
+                    </div>
+                    <div class="offer-item">
+                        <h3>Personalized Content Inspiration <span class="free-tag">Free</span></h3>
+                        <p>We analyze your niche, style, and past performance to suggest new content ideas — twice a day.</p>
+                        <p class="arrow-text">→ Tailored sparks to keep your creativity flowing.</p>
+                    </div>
+                    <div class="offer-item">
+                        <h3>Weekly Trend Roundup <span class="free-tag">Free</span></h3>
+                        <p>A curated digest of what mattered this week: top social media trends, emerging formats, global conversations, and what's gaining traction.</p>
+                        <p class="arrow-text">→ Stay informed. Stay inspired.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-love-us" style="background-color: #f0f4f8;">
+            <div class="container">
+                <h2>Why Creators & Agencies Love Us</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h3>Save Time</h3>
+                        <p>No more trend-hunting across apps.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Never Miss a Beat</h3>
+                        <p>Stay on top of what your audience cares about.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Built Just for You</h3>
+                        <p>Personalized by platform, niche, and region.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Agency Friendly</h3>
+                        <p>Manage multiple creators with unified insights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section" id="newsletter">
+            <div class="container">
+                <h2>Want to try it out?</h2>
+                <p>Sign up for our free trend newsletter — delivered weekly.</p>
+                <form action="#" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="submit-button">Subscribe for Free</button>
+                </form>
+                <p class="spam-notice">No spam. Just signals, not noise.</p>
+            </div>
+        </section>
+
+        <section class="trusted-by-section" id="trusted-by">
+            <div class="container">
+                <h2>Trusted By</h2>
+                <div class="logos">
+                    <img src="https://via.placeholder.com/150x60.png?text=Logo+1" alt="Client Logo 1">
+                    <img src="https://via.placeholder.com/150x60.png?text=Logo+2" alt="Client Logo 2">
+                    <img src="https://via.placeholder.com/150x60.png?text=Logo+3" alt="Client Logo 3">
+                </div>
+                <div class="quote">
+                    <p>“This tool helped us pivot content fast and win more engagement.”</p>
+                    <span class="quote-author">— Creator Agency Lead</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="waitlist">
+        <div class="container">
+            <h2>Launching Soon — Be First in Line</h2>
+            <p>Get early access to real-time alerts and inspiration tools for creators.</p>
+            <a href="#waitlist-form" class="cta-button">Join the Waitlist</a>
+             </div>
+    </footer>
+
+</body>
+</html>
