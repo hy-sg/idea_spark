@@ -23,9 +23,12 @@
         header {
             background-color: transparent; /* Make header background transparent */
             color: #333;
-            padding: 120px 0 80px 0;
+            padding: 80px 0 80px 0; /* Adjusted padding */
             text-align: center;
             border-bottom: 1px solid #e7e7e7; /* Subtle border */
+            display: flex; /* Added for logo and nav alignment */
+            flex-direction: column;
+            align-items: center;
         }
         header h1 {
             font-family: 'Playfair Display', serif;
@@ -196,6 +199,40 @@
             font-size: 1.4em;
         }
 
+        /* Logo Styles */
+        .logo {
+            margin-bottom: 20px; /* Space between logo and heading */
+        }
+        .logo img {
+            height: 50px; /* Increased logo size */
+        }
+
+        /* Menu Styles */
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px; /* Space between menu and heading */
+        }
+        .menu ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+        .menu li {
+            margin: 0 20px; /* Space between menu items */
+        }
+        .menu a {
+            text-decoration: none;
+            color: #333; /* Menu link color */
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .menu a:hover {
+            color: #ff6b6b; /* Hover color */
+        }
+
         @media (max-width: 768px) {
             .container {
                 width: 95%;
@@ -218,11 +255,25 @@
              .problem-solution {
                 gap: 50px;
              }
+             .menu li {
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Globe_with_magnifying_glass.svg" alt="Zaya AI Logo">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
         <div class="container">
             <h1>Stop wasting time on content ideas, and start trending now</h1>
             <p>The world's 1st true AI tool to catch and predict trends that go viral, personalized for you.</p>
@@ -284,7 +335,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 [Your Company Name]. All rights reserved.</p>
+        <p>&copy; 2025 ZayaAI. All rights reserved.</p>
     </footer>
 
     <script>
