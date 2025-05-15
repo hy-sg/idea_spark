@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stay Ahead. Create Smarter.</title>
+    <title>Unlock Limitless Content Ideas</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -11,314 +11,215 @@
             padding: 0;
             background-color: #f8f9fa;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
         }
         .container {
-            width: 80%;
+            width: 85%;
             margin: auto;
             overflow: hidden;
             padding: 20px 0;
         }
         header {
-            background: #ffffff;
+            background-color: #ffffff;
             color: #333;
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
             border-bottom: 1px solid #e7e7e7;
         }
         header h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
+            font-size: 3em;
+            margin-bottom: 20px;
             color: #2c3e50;
         }
         header p {
             font-size: 1.2em;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 30px auto;
             color: #555;
         }
         .cta-button {
             display: inline-block;
-            background-color: #007bff;
+            background-color: #663399;
             color: #fff;
-            padding: 15px 30px;
+            padding: 15px 35px;
             text-decoration: none;
-            font-size: 1.1em;
-            border-radius: 5px;
+            font-size: 1.2em;
+            border-radius: 10px;
             transition: background-color 0.3s ease;
             border: none;
             cursor: pointer;
         }
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #4c2882;
         }
-        .cta-button.secondary {
-            background-color: #6c757d;
-        }
-        .cta-button.secondary:hover {
-            background-color: #5a6268;
-        }
-        .cta-subtext {
-            display: block;
-            font-size: 0.9em;
-            margin-top: 10px;
-            color: #777;
-        }
-        section {
-            padding: 40px 0;
+        .section {
+            padding: 60px 0;
             text-align: center;
         }
-        section h2 {
-            font-size: 2.2em;
+        .section h2 {
+            font-size: 2.5em;
             margin-bottom: 40px;
             color: #2c3e50;
+            text-align: center;
         }
-        .offer-grid, .benefits-grid {
+        .problem-solution {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            text-align: left;
+            align-items: center;
+        }
+        .problem-solution div {
+            padding: 20px;
+        }
+        .problem-solution h3 {
+            font-size: 2em;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        .problem-solution p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        .key-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
+            margin-top: 40px;
             text-align: left;
         }
-        .offer-item, .benefit-item {
+        .key-features div {
             background: #fff;
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
-        .offer-item:hover, .benefit-item:hover {
+        .key-features div:hover {
             transform: translateY(-5px);
         }
-        .offer-item h3, .benefit-item h3 {
+        .key-features h3 {
             font-size: 1.5em;
             margin-bottom: 15px;
-            color: #007bff;
+            color: #663399;
         }
-        .offer-item .premium-tag {
-            font-size: 0.8em;
-            background-color: #ffc107;
-            color: #333;
-            padding: 3px 8px;
-            border-radius: 3px;
-            margin-left: 10px;
-            display: inline-block;
-        }
-         .offer-item .free-tag {
-            font-size: 0.8em;
-            background-color: #28a745;
-            color: #fff;
-            padding: 3px 8px;
-            border-radius: 3px;
-            margin-left: 10px;
-            display: inline-block;
-        }
-        .offer-item p, .benefit-item p {
+        .key-features p {
             font-size: 1em;
             color: #555;
-            margin-bottom: 15px;
         }
-        .offer-item .arrow-text {
-            font-weight: bold;
-            color: #333;
-        }
-        .newsletter-section {
-            background-color: #e9ecef;
+        .testimonial-section {
+            background-color: #f0f4f8;
             padding: 60px 0;
+            text-align: center;
         }
-        .newsletter-section input[type="email"] {
-            padding: 15px;
-            font-size: 1em;
-            width: 60%;
-            max-width: 400px;
-            border: 1px solid #ccc;
-            border-radius: 5px 0 0 5px;
-            margin-bottom: 10px;
-        }
-        .newsletter-section .submit-button {
-            padding: 15px 30px;
-            font-size: 1em;
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            border-radius: 0 5px 5px 0;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .newsletter-section .submit-button:hover {
-            background-color: #1e7e34;
-        }
-        .newsletter-section .spam-notice {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 15px;
-        }
-        .trusted-by-section {
-            padding: 40px 0;
-            background: #fff;
-        }
-        .trusted-by-section .logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-bottom: 30px;
-        }
-        .trusted-by-section .logos img {
-            max-height: 60px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-        .trusted-by-section .logos img:hover {
-            opacity: 1;
-        }
-        .trusted-by-section .quote {
-            font-style: italic;
+        .testimonial-section blockquote {
+            font-size: 1.5em;
             color: #555;
-            max-width: 600px;
-            margin: 0 auto;
+            margin-bottom: 20px;
+            font-style: italic;
+            border-left: 5px solid #663399;
+            padding-left: 20px;
+            text-align: left;
         }
-        .trusted-by-section .quote-author {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-            color: #333;
+        .testimonial-section p {
+            font-size: 1em;
+            color: #777;
         }
-        footer {
-            background: #2c3e50;
+         footer {
+            background-color: #34495e;
             color: #fff;
             text-align: center;
-            padding: 50px 0;
+            padding: 25px 0;
+            margin-top: 80px;
         }
-        footer h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #fff;
-        }
-        footer p {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            color: #f8f9fa;
+        footer p{
+             font-size: 1em;
         }
 
         @media (max-width: 768px) {
             .container {
-                width: 90%;
+                width: 95%;
             }
             header h1 {
-                font-size: 2.2em;
+                font-size: 2.5em;
             }
             header p {
                 font-size: 1em;
             }
-            .offer-grid, .benefits-grid {
+            .problem-solution {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .problem-solution div {
+                padding: 10px;
+            }
+            .problem-solution h3{
+                font-size: 1.75em;
+            }
+            .key-features {
                 grid-template-columns: 1fr;
             }
-            .newsletter-section input[type="email"] {
-                width: calc(100% - 32px); /* Account for padding */
-                border-radius: 5px;
-                margin-bottom: 10px;
-            }
-            .newsletter-section .submit-button {
-                width: 100%;
-                border-radius: 5px;
+            .section h2{
+                font-size: 2em;
             }
         }
     </style>
 </head>
 <body>
-
     <header>
         <div class="container">
-            <h1>Create Content That Resonates — Every Time</h1>
-            <p>Real-time trend alerts, personalized content inspiration, and weekly digests tailored for creators and their teams.</p>
-            <a href="#waitlist" class="cta-button">Join the Waitlist</a>
-            <span class="cta-subtext">Sign up now to get free weekly insights and early access.</span>
+            <h1>Stop Struggling with Content Ideas</h1>
+            <p>The #1 tool for creators who want to eliminate writer's block and create fresh, engaging content - effortlessly.</p>
+            <a href="#get-started" class="cta-button">Get Started Now</a>
         </div>
     </header>
 
     <main>
-        <section id="what-we-offer">
-            <div class="container">
-                <h2>What We Offer</h2>
-                <div class="offer-grid">
-                    <div class="offer-item">
-                        <h3>Instant Trend Alerts <span class="premium-tag">Premium</span></h3>
-                        <p>Cut through the noise. Get notified the moment a major trend breaks — whether it’s on TikTok, YouTube, or in world news.</p>
-                        <p class="arrow-text">→ Be the first to react. Stay relevant. Go viral.</p>
-                    </div>
-                    <div class="offer-item">
-                        <h3>Personalized Content Inspiration <span class="free-tag">Free</span></h3>
-                        <p>We analyze your niche, style, and past performance to suggest new content ideas — twice a day.</p>
-                        <p class="arrow-text">→ Tailored sparks to keep your creativity flowing.</p>
-                    </div>
-                    <div class="offer-item">
-                        <h3>Weekly Trend Roundup <span class="free-tag">Free</span></h3>
-                        <p>A curated digest of what mattered this week: top social media trends, emerging formats, global conversations, and what's gaining traction.</p>
-                        <p class="arrow-text">→ Stay informed. Stay inspired.</p>
-                    </div>
+        <section class="section problem-solution">
+            <div >
+                <h3>The Problem</h3>
+                <p>As a creator, you know the pressure of constantly coming up with new, exciting content.   ঘন্টার পর ঘন্টা brainstorming, endless scrolling, and the fear of running out of ideas.  It's a huge time sink and a massive source of stress.</p>
+            </div>
+            <div>
+                <h3>Our Solution</h3>
+                <p>We provide you with a constant flow of unique content ideas, tailored to your niche and audience.  No more staring at a blank screen.  Just endless inspiration, so you can focus on creating your best work.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Key Features</h2>
+            <div class="key-features">
+                <div>
+                    <h3>AI-Powered Inspiration</h3>
+                    <p>Our advanced AI analyzes trends, audience data, and top-performing content to suggest winning ideas.</p>
+                </div>
+                <div>
+                    <h3>Niche Specific</h3>
+                    <p>Get ideas tailored to your specific content area, whether it's vlogging, tutorials, art, music, or anything in between.</p>
+                </div>
+                <div>
+                    <h3>Save Time & Energy</h3>
+                    <p>Stop wasting hours on brainstorming.  Our tool delivers fresh concepts directly to you, so you can focus on creation.</p>
+                </div>
+                 <div>
+                    <h3>Never Run Out of Ideas</h3>
+                    <p>With a virtually unlimited supply of suggestions, you'll always have something new and exciting to work on.</p>
                 </div>
             </div>
         </section>
 
-        <section id="why-love-us" style="background-color: #f0f4f8;">
+        <section class="testimonial-section">
             <div class="container">
-                <h2>Why Creators & Agencies Love Us</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <h3>Save Time</h3>
-                        <p>No more trend-hunting across apps.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>Never Miss a Beat</h3>
-                        <p>Stay on top of what your audience cares about.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>Built Just for You</h3>
-                        <p>Personalized by platform, niche, and region.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>Agency Friendly</h3>
-                        <p>Manage multiple creators with unified insights.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="newsletter-section" id="newsletter">
-            <div class="container">
-                <h2>Want to try it out?</h2>
-                <p>Sign up for our free trend newsletter — delivered weekly.</p>
-                <form action="#" method="POST">
-                    <input type="email" name="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="submit-button">Subscribe for Free</button>
-                </form>
-                <p class="spam-notice">No spam. Just signals, not noise.</p>
-            </div>
-        </section>
-
-        <section class="trusted-by-section" id="trusted-by">
-            <div class="container">
-                <h2>Trusted By</h2>
-                <div class="logos">
-                    <img src="https://via.placeholder.com/150x60.png?text=Logo+1" alt="Client Logo 1">
-                    <img src="https://via.placeholder.com/150x60.png?text=Logo+2" alt="Client Logo 2">
-                    <img src="https://via.placeholder.com/150x60.png?text=Logo+3" alt="Client Logo 3">
-                </div>
-                <div class="quote">
-                    <p>“This tool helped us pivot content fast and win more engagement.”</p>
-                    <span class="quote-author">— Creator Agency Lead</span>
-                </div>
+                <blockquote>
+                    "This tool has been a game-changer for my workflow.  I used to spend hours trying to come up with new video ideas, but now I have a constant stream of inspiration.  It's like having a creative partner!"
+                </blockquote>
+                <p>-  Youtuber, Tech Niche</p>
             </div>
         </section>
     </main>
 
-    <footer id="waitlist">
-        <div class="container">
-            <h2>Launching Soon — Be First in Line</h2>
-            <p>Get early access to real-time alerts and inspiration tools for creators.</p>
-            <a href="#waitlist-form" class="cta-button">Join the Waitlist</a>
-             </div>
+    <footer>
+        <p>&copy; 2025 [Your Company Name]. All rights reserved.</p>
     </footer>
 
 </body>
